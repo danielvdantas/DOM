@@ -1,4 +1,4 @@
-let element;
+// let element;
 /* ### Aula 1 
     getElementById() 
     Seleciono o elemento pelo ID do elemento
@@ -159,3 +159,52 @@ let element;
 // const script = body.querySelector('script')
 // body.insertBefore(div, script)
 
+/*
+    EVENTOS
+*/
+//  function imprime() {
+//     console.log('print!') // Executado pelo evento na TAG <h1> pelo HTML
+// }
+/*
+    ## EVENTOS DE TECLADO  
+ */
+
+// const input = document.querySelector('input');
+
+// input.onkeydown = function () {
+//     console.log('rodei!')
+// }
+
+/*
+## Adicionando eventos via JS
+*/
+
+// const h1 = document.querySelector('h1')
+// h1.addEventListener('mouseover', print) // addEventListener() recebe 2 argumentos, um que é o evento e o outro a ação/função a ser executada ao receber o evento.
+
+// function print() {
+//     console.log('rodei!')
+// }
+
+/*
+## Adicionando eventos via JS (Outro método)
+Dessa forma, caso exista ourtra função, ele irá executar a última. Por isso o mais correto é usar o "eventListener". Tudo depende da necessidade.
+*/
+
+// const h1 = document.querySelector('h1')
+
+// h1.onclick = print; // O evento de click do elemento "h1" recebe o atalho de uma função que é executada pelo evento.
+
+// function print() {
+//     console.log('rodei!')
+// }
+
+/*
+Argumento event
+*/
+
+const input = document.querySelector('input');
+
+input.onkeydown = function (event) {
+    console.log(event.target)
+}
